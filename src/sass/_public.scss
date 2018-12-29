@@ -1,6 +1,6 @@
 body, h1, h2, h3, h4, h5, h6, hr, p, dl, dt, dd, ul, ol, li, form, fieldset, button, input, textarea, th, td { margin:0; padding:0; }
 ul, ol { list-style:none; }
 a { text-decoration:none; }
-img{width: 100%;display: block;}
-body,header,section,footer{width: 100%;box-sizing: border-box;}
+img{display: block; border: 0;}
+header,section,footer{width: 100%;box-sizing: border-box;padding-left: 31.5px;padding-right: 31.5px;}
 i{font-style: normal;}
