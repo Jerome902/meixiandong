@@ -2,6 +2,154 @@
 $Height : 30px;
 $icon : url(../img/index/top_icon.png) no-repeat;
 $rightIcon : url(../img/index/right_floating.png) no-repeat;
+@mixin leftTit(){
+	.left-tit{
+		float: left;
+		.tit-logo{
+			float: left;
+			img{
+				width: 50px;
+				height: 47px;
+			}
+		}
+		.tit-intro{
+			float: left;
+			.tit-meixian{
+				margin-left: 3px;
+				line-height: 50px;
+				font-size: 20px;
+				color: #444;
+				text-align: center;
+			}
+			.tit-yushou{
+				color: #999;
+				font-size: 14px;
+				margin-left: 20px;
+			}
+			a{
+				color: #666;
+				span{
+					width: 90px;
+					font-size: 12px;
+					margin-left: 25px;
+					font-family: "simsun";
+				}
+			}
+		}
+	}
+}
+@mixin rightTit(){
+	.right-tit{
+		float: right;
+		ul{
+			margin-top: 14px;
+			border-right: 1px solid #eeeeee;
+			height: 34px;
+			li{
+				float: left;
+				width: 82px;
+				height: 34px;
+				line-height: 34px;
+				color: #646464;
+				cursor: default;
+				word-break: break-all;
+				word-wrap: break-word;
+				position: relative;
+				text-align: center;
+				border: 1px solid #eeeeee;
+				border-bottom: 0;
+				a{
+					width: 100%;
+					display:block;
+					font-size: 12px;
+					font-family: "simsun";
+					cursor: pointer;
+					box-sizing: border-box;
+					text-align: center;
+					line-height: 33px;
+					color: #666;
+				}
+			}
+		}
+	}
+}
+@mixin floor(){
+	.tit-floor{
+		width: 36px;
+		height: 24px;
+		float: left;
+		margin-top: 12px;
+		line-height: 24px;
+		color: #fff;
+		background: url(../img/index/loft_01.jpg) no-repeat;
+		margin-right: 20px;
+	}
+}
+@mixin floorCon(){
+	.floor-con{
+		width: 1200px;
+		overflow: hidden;
+		.left-con{
+			width: 320px;
+			height: 496px;
+			float: left;
+			.top-con{
+				height: 247px;
+				a{
+					color: #666;
+				}
+			}
+			ul{
+				width: 290px;
+				height: 124px;
+				float: left;
+				padding-left: 30px;
+				overflow: hidden;
+				li{
+					h5{
+						color: #59393a;
+						font-size: 16px;
+						font-family: "microsoft yahei","微软雅黑";
+						font-weight: bold;
+						margin: 20px 0 10px 0;
+					}
+					a{
+						float: left;
+						margin-right: 10px;
+						font-size: 14px;
+						font-family: "microsoft yahei","微软雅黑";
+						line-height: 24px;
+						white-space: nowrap;
+						color: #666;
+					}
+				}
+			}
+		}
+		.right-con{
+			float: left;
+			width: 880px;
+			ul{
+				height: 497px;
+				li{
+					float: left;
+					border-right: 1px solid #eeeeee;
+					border-bottom: 1px solid #eeeeee;
+				}
+				
+			}
+		}
+	}
+}
+@mixin loftTit(){
+	.loft-title{
+		width: 100%;
+		height: 50px;
+		border-bottom: 1px solid #1EAA39;
+		@include floor();
+		@include leftTit();
+		@include rightTit();
+	}
+}
 //顶部通知
 .top-pic{
 	height: 90px;
@@ -488,43 +636,12 @@ aside{
 }
 //美鲜预售
 .list-product{
+	overflow: hidden;
 	.product-title{
 		height: 42px;
 		overflow: hidden;
-		.left-tit{
-			.tit-logo{
-				float: left;
-				img{
-					width: 50px;
-					height: 47px;
-				}
-			}
-			.tit-intro{
-				float: left;
-				.tit-meixian{
-					margin-left: 3px;
-					line-height: 50px;
-					font-size: 20px;
-					color: #444;
-					text-align: center;
-				}
-				.tit-yushou{
-					color: #999;
-					font-size: 14px;
-					margin-left: 20px;
-				}
-				a{
-					color: #666;
-					span{
-						width: 90px;
-						font-size: 12px;
-						margin-left: 25px;
-						font-family: "simsun";
-					}
-				}
-			}
-		}
-		.right-tit{
+		@include leftTit();
+		.right-title{
 			float: right;
 			width: 242px;
 			height: 42px;
@@ -552,7 +669,7 @@ aside{
 		border-top: 1px solid #1daa39;
 		font-family: Verdana,"simsun";
 		#list-product{
-			width: 960px;
+			width: 1048px;
 			height: 244px;
 			overflow: hidden;
 			float: left;
@@ -609,11 +726,152 @@ aside{
 			}
 		}
 		.notice{
+			width: 238px;
+			height: 243px;
+			border: 1px solid #EEEEEE;
+			border-left: none;
 			float: right;
+			.list-notice{
+				width: 204px;
+				height: 206px;
+				margin: 0 auto;
+				margin-top: 20px;
+				.first-notice{
+					height: auto;
+					padding-bottom: 10px;
+					p{
+						height: 40px;
+						background: url(../img/index/shanshu9o.gif) no-repeat;
+						padding-left: 52px;
+						i{
+							color: #333;
+							line-height: 20px;
+							display: block;
+						}
+						em{
+							color: #999;
+							line-height: 20px;
+							display: block;
+						}
+					}
+					h3{
+						color: #333333;
+						font-size: 16px;
+						line-height: 24px;
+						font-family: "microsoft yahei UI";
+						font-weight: normal;
+						margin: 10px 2px;
+						height: 48px;
+						overflow: hidden;
+					}			
+				}
+				li{
+					width: 204px;
+					height: 27px;
+					font-size: 12px;
+					float: left;
+					overflow: hidden;
+					text-overflow:ellipsis;
+					white-space: nowrap;	
+					a{
+						color: #666;
+						span:first-of-type{
+							font-weight: bold;
+						}
+						
+					}
+				}
+			}
 		}
 	}
 }
-
+//特惠专区
+.list-specil{
+	margin: 20px 0;
+	.specil-title{
+		width: 100%;
+		height: 42px;
+		display: block;
+		border-bottom: 1px solid #1eaa39;
+		overflow: hidden;
+		@include leftTit();
+		@include rightTit();
+	}	
+	.specil-con{
+		width: 1286px;
+		overflow: hidden;
+		ul{
+			width: 1286px;
+			height: 502px;
+			li{
+				float: left;
+				border-left: 1px solid #eeeeee;
+				border-bottom: 1px solid #eeeeee;
+			}
+		}
+	}
+}
+//中部banner
+.middle-banner{
+	margin: 20px auto;
+}
+//1F 粮油副食
+.con{
+	@include loftTit();
+	@include floorCon();
+}
+//底部
+$arr : 1 2 3;
+footer{
+	width: 100%;
+	margin: 0 auto;
+	margin-top: 30px;
+	border-top: 1px solid #eeeeee;
+	font-family: verdana,"宋体";
+	padding-bottom: 50px;
+	.help{
+		.help-icon{
+			width: 100%;
+			height: 98px;
+			border-bottom: 1px solid #eeeeee;
+			float: left;
+			ul{
+				width: 1200px;
+				margin: 0 auto;
+				overflow: hidden;
+				padding-bottom: 30px;
+				li{
+					width: 300px;
+					height: 70px;
+					float: left;
+					margin-top: 30px;
+					i{
+						width: 46px;
+						height: 46px;
+						background-repeat: no-repeat;
+						float: left;
+						margin-right: 5px;
+						
+					}
+					p{
+						width: 170px;
+						height: 30px;
+						margin-left: 5px;
+						font-size: 18px;
+						font-family: "微软雅黑";
+					}
+				}
+				@each $i in $arr{
+					li:nth-child(#{$i}){
+						i{
+							background: url(../img/index/footer0#{$i}.png);	
+						}
+					}
+				}
+			}
+		}
+	}
+}
 
 
 
