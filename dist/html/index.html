@@ -4,6 +4,8 @@
 		<meta charset="utf-8">
 		<title>美鲜冻品商城_一站式餐饮原料供应商、全球直采、菜品研发、餐饮策划、美鲜金融、高端冷链仓配专家！</title>
 		<link rel="stylesheet" type="text/css" href="../css/index.min.css"/>
+		<script src="../js/jquery-1.11.3.min.js"></script>
+		<script src="../js/index.min.js"></script>
 	</head>
 	<body>
 		<div class="top-pic">
@@ -13,16 +15,16 @@
 		<header>
 			<ul class="left">
 				<li>欢迎光临美鲜冻品商城</li>
-				<li><a href="javescript:;">登录</a>|<a href="">注册</a></li>
+				<li><a href="login.html">登录</a>|<a href="register.html">注册</a></li>
 			</ul>
-			<ul class="right">
-				<li><a href="javescript:;">我的美鲜 <i class="icon1"></a></i>
-					<ul>
-						<li><a href="">我的订单</a></li>
-						<li><a href="">用户信息</a></li>
-						<li><a href="">收货地址</a></li>
-						<li><a href="">我的红包</a></li>
-						<li><a href="">资金管理</a></li>
+			<ul class="right" id="right">
+				<li id="first-list"><a href="javescript:;">我的美鲜 <i class="icon1"></a></i>
+					<ul id="list-operate">
+						<li><a href="javescript:;">我的订单</a></li>
+						<li><a href="javescript:;">用户信息</a></li>
+						<li><a href="javescript:;">收货地址</a></li>
+						<li><a href="javescript:;">我的红包</a></li>
+						<li><a href="javescript:;">资金管理</a></li>
 					</ul>
 				</li>
 				<li><a href="javescript:;"><i class="icon2"></i>我的购物车<i class="icon3">0</i><i class="icon4"></i></a></li>
@@ -36,34 +38,34 @@
 			<div class="null">
 				<div class="null-bottom">
 					<ul>
-						<li>
+						<li id="null-cart">
 							<a href="javascript:;">
-								<i class="cart"></i>
+								<i class="cart" id="cart"></i>
 								<p>购物车</p>
 								<span id="cart-nummber">0</span>
 							</a>
-							
 						</li>
 						<li>
 							<a href="javascript:;">
 								<i class="QQ"></i>
 							</a>
-							<div id="">
+							<div id="QQ">
+								客服QQ，点击交谈
 							</div>
 						</li>
 						<li>
 							<a href="javascript:;">
 								<i class="phone"></i>
-								<div></div>
 							</a>
+							<div id="phone">客服电话：4006-728-726</div>
 						</li>
 						<li>
 							<a href="javascript:;">
 								<i class="code"></i>
-								<div class="code-show">
-									<img src="../img/index/code.png" >
-								</div>
 							</a>
+							<div class="code-show" id="code-show">
+								<img src="../img/index/code.png" >
+							</div>
 						</li>
 						<li>
 							<a href="javascript:;">
@@ -73,7 +75,7 @@
 					</ul>
 				</div>
 			</div>
-			<div class="cart-show">
+			<div class="cart-show" id="cart-show">
 				<div class="cart-wrap">
 					<div class="cart-null">
 						<div class="null-con">
@@ -122,7 +124,7 @@
 				<ul>
 					<li><a href="javascript:;">首页</a><span>/</span></li>
 					<li><a href="javascript:;">新品上架</a><span>/</span><i class="icon-new"></i></li>
-					<li><a href="javascript:;">店铺列表&nbsp;</a><img src="../img/index/shopicon.png" >&nbsp;&nbsp;&nbsp;&nbsp;<span>/</span></li>
+					<li><a href="javascript:;">店铺列表&nbsp;</a><img src="../img/index/shopicon.png" ><span>/</span></li>
 					<li><a href="javascript:;">好货推荐</a><span>/</span></li>
 					<li><a href="javascript:;">美鲜惠</a><span>/</span></li>
 					<li><a href="javascript:;">样品区</a><span>/</span></li>
