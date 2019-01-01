@@ -430,12 +430,13 @@ aside{
 							background-position: -39px -108px;
 							margin-top: 10px;
 						}
+						.code-show{
+							right: 42px;
+							position: absolute;
+							bottom: -80px;
+						}
 					}
-					.code-show{
-						right: 42px;
-						position: absolute;
-						bottom: -80px;
-					}
+					
 				}
 				li:nth-child(5){
 					margin-top: 25px;
@@ -460,7 +461,7 @@ aside{
 		display: none;
 		position: absolute;
 		width: 330px;
-		right: -187px;
+		right: 41px;
 		top: 0;
 		background: #fff;
 		height: 100%;
@@ -1103,8 +1104,54 @@ footer{
 		}
 	}
 }
-
-
+//遮罩
+.mark{
+	//display: none;
+    background: black;
+    opacity: 0.6;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    z-index: 1001;
+}
+//遮罩图
+.mark-pic{
+	width: 950px;
+    position: fixed;
+    display: none;
+    left: 37.8%;
+    top: 0;
+    margin: -260px 0 0 -280px;
+    z-index: 2000;
+	.mark-picc{
+		position: relative;
+		height: 440px;
+		overflow: hidden;
+		img{
+			border-radius: 100%;
+		}
+		a{
+			color: #666;
+		}
+		#mark-close{
+			background: black;
+			display: block;
+			width: 53px;
+			height: 30px;
+			line-height: 30px;
+			font-weight: bold;
+			font-size: 14px;
+			color: #fff;
+			text-indent: 12px;
+			overflow: hidden;
+			position: absolute;
+			right: 12px;
+			top: 5px;
+			z-index: 99;
+		}
+	}
+}
 
 
 

@@ -76,10 +76,42 @@ $(function(){
 	//二维码移入移出效果
 	$(".code").parent().hover(function(){
 			$(this).css("background","#1a9733");
-			$("#code-show").animate({right:"300px"});
+			$("#code-show").animate({right:"42px"});
 		},
 		function(){
-			$("#code-show").animate({left:"-300px"});
-		
+			$("#code-show").animate({right:"-187px"});
+			$(this).css("background","");
 		})
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	//遮罩
+	$("#mark-pic").css({display:"block"}).animate({top:"50%"},3000);
+	$("#mark-close").click(function(){
+		$("#mark").css({display:"none"});
+		$("#mark-pic").css({display:"none"});
+	})
 })
