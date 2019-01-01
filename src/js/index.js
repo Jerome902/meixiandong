@@ -82,12 +82,71 @@ $(function(){
 			$("#code-show").animate({right:"-187px"});
 			$(this).css("background","");
 		})
+	//回到顶部按钮
+	$("#re-top").parent().click(function(){
+		//$("html,body").animate({scrollTop:"0"});
+		 $("html,body").scrollTop();
+	})
+	/*
+		logo*搜索栏
+	*/
+	//热门搜索移入效果
+	$("#hotwords").on("mouseenter","a",function(event){
+		var target = $(event.target);
+		target.css({'color':'#1a9733'});
+    })
+	$("#hotwords").on("mouseleave","a",function(event){
+		var target = $(event.target);
+		target.css({'color':'#999'});
+	})
+	/*
+		列表与banner
+	*/
+	//左侧列表移入效果
+	$("#list").on("mouseenter","h3",function(event){
+		var target = $(event.target);
+		target.css({'background':'#1a9733'});
+    })
+	$("#list").on("mouseleave","h3",function(event){
+		var target = $(event.target);
+		target.css({'background':''});
+	})
 	
+	var $a = $("#a");
+	var $level01 = $("#ul"); //一级菜单
+	var $level02 = $("#div"); //二级菜单
 	
-	
-	
-	
-	
+	//获取json
+	$.getJSON("js/menu.json", function(json) {
+		console.log(json.menu);
+		var myMenu = json.menu;
+		//console.log(myMenu);
+		
+		var myOne = myMenu.one;
+		var myTwo = myMenu.two;
+		//console.log(myOne);
+		$.each(myOne,function(j){
+			$("<li>" + myOne[j] + "</li>").appendTo("#ul");
+		})
+		$.each(myTwo,function(i){
+			$("<div>" + myTwo[i] + "</div>").appendTo("#div");
+		})
+		
+		$level01.mouseover(function() {
+			$(this).css("display", "block");
+		});
+		$a.mouseover(function() {
+			$level01.css("display", "block");
+		});
+		$("ul li").mouseover(function() {
+			$level02.css("display", "block");
+			$("#div div").css("display", "none").eq($(this).index()).css("display", "block");
+		});
+		$("#div div").mouseout(function() {
+			$level01.css("display", "none");
+			$level02.css("display", "none");
+		});
+	});
 	
 	
 	

@@ -431,7 +431,7 @@ aside{
 							margin-top: 10px;
 						}
 						.code-show{
-							right: 42px;
+							right: -187px;
 							position: absolute;
 							bottom: -80px;
 						}
@@ -439,10 +439,11 @@ aside{
 					
 				}
 				li:nth-child(5){
-					margin-top: 25px;
+					margin-top: 20px;
 					height: 28px;
 					padding-top: 10px;
 					a{
+						display: block;
 						padding-left: 11px;
 						padding-top: 10px;
 						.reTop{
@@ -688,6 +689,9 @@ aside{
 			li{
 				height: 37px;
 				line-height: 37px;
+				h3{
+					font-weight: normal;
+				}
 				a{	
 					display: block;
 					color: #ffffff;
@@ -697,6 +701,7 @@ aside{
 				}
 				//弹出的列表
 				.list-con{
+					//display:none;
 					width: 260px;
 					height: 410px;
 					position: absolute;
@@ -727,6 +732,7 @@ aside{
 					}
 				}
 				.list-con-right{
+					display:none;
 					width: 180px;
 					height: 410px;
 					overflow: hidden;
