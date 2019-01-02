@@ -3,8 +3,45 @@
 	<head>
 		<meta charset="utf-8">
 		<title></title>
+		<link rel="stylesheet" href="../css/login.min.css">
 	</head>
 	<body>
-		登录
+		<header class="header">
+			<div class="logo">
+				<a href="index.html"><img src="../img/login/logo.jpg" alt=""></a>
+			</div>
+			<div class="hello">嘿，欢迎来到美鲜冻品商城！</div>
+		</header>
+		<!-- 表单和大图 -->
+		<section class="form-logo">
+			<div class="content">
+				<a href="javescript:;">
+					<div class="con-left"></div>
+				</a>
+				<div class="con-right">
+					<div class="form-top">
+						<h2>
+							<span id="login_tab1" class="on">登录</span>
+							<span id="login_tab2">验证码登录</span>
+						</h2>
+					</div>
+					<div class="form-con">
+						<div class="user-message">
+							<input type="text" id="username" class="user" placeholder="请输入用户名/邮箱/手机号码">
+							<input id="password" class="pwd" type="password" placeholder="请输入密码">
+							<div class="ver">
+								<input type="text" name="code_math" class="user" id="code_math" placeholder="请输入验证码"><img src="" alt=""><a href=""></a>
+							</div>
+							<div class="infor">
+								<div class="rem"></div>
+								<p><a href="javescript:;">忘记密码</a></p>
+							</div>
+						</div>
+						<div class="login-btn"></div>
+						<h3><a href="register.html"></a></h3>
+					</div>
+				</div>
+			</div>
+		</section>
 	</body>
 </html>

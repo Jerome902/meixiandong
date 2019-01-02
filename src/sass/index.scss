@@ -150,6 +150,7 @@ $rightIcon : url(../img/index/right_floating.png) no-repeat;
 		@include rightTit();
 	}
 }
+.padding{width: 100%;box-sizing: border-box;padding-left: 31.5px;padding-right: 31.5px;}
 //顶部通知
 .top-pic{
 	height: 90px;
@@ -162,7 +163,7 @@ $rightIcon : url(../img/index/right_floating.png) no-repeat;
 	
 }
 //头部
-header{
+.header{
 	width: 100%;
 	height: $Height;
 	background: #f5f5f5;
@@ -741,6 +742,7 @@ aside{
 					position: absolute;
 					top: 2px;
 					left: 570px;
+					z-index: 100;
 					a{
 						color: #000;
 					}
@@ -772,7 +774,7 @@ aside{
 		overflow: hidden;
 		//banner
 		.banner-list{
-			width: 5060px;
+			width: 4800px;
 			height: 489px;
 			position: absolute;
 			li{
@@ -865,7 +867,7 @@ aside{
 		border-top: 1px solid #1daa39;
 		font-family: Verdana,"simsun";
 		#list-product{
-			width: 1048px;
+			width: 989px;
 			height: 244px;
 			overflow: hidden;
 			float: left;
@@ -1018,7 +1020,7 @@ aside{
 }
 //底部
 $arr : 1 2 3 4;
-footer{
+.footer{
 	width: 100%;
 	margin: 0 auto;
 	margin-top: 30px;

@@ -3,8 +3,86 @@
 	<head>
 		<meta charset="utf-8">
 		<title></title>
+		<link rel="stylesheet" href="../css/register.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/index.min.css"/>
+		<script src="../js/jquery-1.11.3.min.js"></script>
+		<script src="../js/register.min.js"></script>
 	</head>
 	<body>
-		注册
+		<!-- logo和右侧标语 -->
+		<header>
+			<div class="top-box">
+				<div class="logo">
+					<a href="index.html"><img src="../img/register/logo.jpg" alt=""></a>
+				</div>
+				<div class="message">
+					嘿，欢迎来到美鲜冻品商城！
+					<span class="mes-tit"><a href="login.html">请登录</a></span>
+					<span><a href="register.html">免费注册</a></span>
+				</div>
+			</div>
+		</header>
+		<!-- 通知图 -->
+		<section class="pic">
+			<a href="javescript:;"><img src="../img/register/register_banner.jpg" alt=""></a>
+		</section>
+		<!-- 表单和二维码 -->
+		<section class="form-box">
+			<div class="form-top">
+				<span>注册新用户</span>
+				<span>已经注册，<a href="login.html">现在登录 ></a></span>
+			</div>
+			<div class="form-con">
+				<form>
+					<div id="phone-test" class="register-inf">
+						<div class="yh"><span>*</span>验证手机：</div>
+						<input type="text" class="user" placeholder="请输入验证手机号">
+					</div>
+					<div id="code-test" class="register-inf">
+						<div class="yh"><span>*</span>验证码：</div>
+						<input type="text" class="user" placeholder="请输入右侧验证码">
+					</div>
+					<div id="message-test" class="register-inf">
+						<div class="yh"><span>*</span>短信验证码：</div>
+						<input type="text" class="user" placeholder="请输入短信验证码">
+					</div>
+					<div id="password-test" class="register-inf">
+						<div class="yh"><span>*</span>密码：</div>
+						<div class="yh1">
+							<input type="text" class="user" placeholder="请输入密码">
+							<label id="password-notice"> 登录密码不能少于 6 个字符。</label>
+						</div>
+						
+					</div>
+					<div id="degree">
+						<div class="degree-center">
+							<span id="pwd-lower">弱</span>
+							<span id="pwd-middle">中</span>
+							<span id="pwd-high">强</span>
+						</div>
+					</div>
+					<div id="pass-test" class="register-inf">
+						<div class="yh"><span>*</span>确认密码：</div>
+						<input type="text" class="user" placeholder="确认密码">
+						<label id="confirm-password-notice"> 登录密码不能少于 6 个字符。</label>
+					</div>
+					<div id="agree-check" class="register-inf">
+						<div class="xy">
+							<input type="checkbox" value="1">
+							我已阅读并同意
+							<span><a href="javescript:;">用户协议</a></span>
+						</div>
+					</div>
+					<div class="register-btn">
+						<input name="Submit" type="button" id="registSubmit" value="提交">
+					</div>
+				</form>
+			</div>
+			<div class="app-code">
+				<img src="../img/register/regist_index.jpg" alt="">
+			</div>
+		</section>
+		<!-- 底部信息 -->
+		<footer class="footer"></footer>
 	</body>
 </html>

@@ -125,21 +125,28 @@ $(function(){
 		$listCon.css({display:"none"});
 		$listConRt.css({display:"none"});
 	})
+	
+	
+// 	$.getJSON("../menu.json",function(i){
+// 		var one = i.menu;
+// 		console.log(one.one[0]);
+// 	})
+
 	//获取json
-// 	$.getJSON("menu.json", function(json) {
-// 		console.log(json.menu);
-// 		var myMenu = json.menu;
-// 		
-// 		var myOne = myMenu.one;
-// 		var myTwo = myMenu.two;
-// 	
-// 		$.each(myOne,function(j){
-// 			$("<li>" + myOne[j] + "</li>").appendTo("#ul");
-// 		})
-// 		$.each(myTwo,function(i){
+	$.getJSON("../menu.json", function(json) {
+		console.log(json.menu);
+		var myMenu = json.menu;
+		var myOne = myMenu.one;
+		var myTwo = myMenu.two;
+	
+		$.each(myOne,function(j){
+			$("<li><h3><a href='javescript:;'>" + myOne[j] + "</a></h3></li>").appendTo("#list-show");
+		})
+
+//		$.each(myTwo,function(i){
 // 			$("<div>" + myTwo[i] + "</div>").appendTo("#div");
 // 		})
-// 		
+		
 // 		$listCon.mouseover(function() {
 // 			$(this).css("display", "block");
 // 		});
@@ -154,7 +161,7 @@ $(function(){
 // 			$listCon.css("display", "none");
 // 			$level02.css("display", "none");
 // 		});
-// 	});
+	});
 	//banner轮播效果
 	var $banner = $("#banner")
 	var $bannerList = $("#banner-list");
@@ -173,7 +180,6 @@ $(function(){
 	});
 	function slider(){
 		index ++;
-	//	console.log(index);
 		doSlider();
 	}
 	function doSlider(){
@@ -184,11 +190,11 @@ $(function(){
 		$bannerList.stop().animate({
 			left : - (index + 1) * $listPicWidth + "px"
 		},1000,function(){
-			if(index == size){
+			if((index + 1) == size){
 				index = -1;
 				$bannerList.css('left', - (index + 1) * $listPicWidth + 'px');
 			}else if(index == -1){				
-				index = size - 1;
+				index = size;
 				$bannerList.css('left', - (size) * $listPicWidth + 'px');
 			}
 		});
@@ -197,15 +203,15 @@ $(function(){
 	timer = setInterval(slider,3000);
 		// 点击圆点切换图片
 	$btn.mouseenter(function(){
-		$(this).css({opacity:1})
+		$(this).css({opacity:1,height: "44px"})
 		$(this).children().css({display:"block"})
-		index = $(this).index();
+		index = $(this).index() - 1;
 		doSlider();
 	});
 	$btn.mouseleave(function(){
-		$(this).css({opacity:0.3})
+		$(this).css({opacity:0.3,height: "40px"})
 		$(this).children().css({display:"none"})
-		//index = $(this).index();
+	//	index = $(this).index();
 		doSlider();
 	});
 	

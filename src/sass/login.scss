@@ -1,0 +1,83 @@
+@import "public";
+
+//logo
+.header{
+	width: 1200px;
+	margin: 0 auto;
+	height: 120px;
+	background: #FFF;
+	.logo{
+		margin-top: 20px;
+		float: left;
+	}
+	.hello{
+		float: right;
+		line-height: 120px;
+		font-size: 13px;
+		color: #959595;
+		font-family: "Microsoft Yahei", "微软雅黑";
+	}
+}
+//大图和表单
+.form-logo{
+	background: url(../img/login/1545757044026237404.jpg) no-repeat center center;
+	width: 100%;
+	overflow: hidden;
+	left: 0;
+	background-size: cover;
+	height: 600px;
+	.content{
+		width: 1200px;
+		margin: 0 auto;
+		a{
+			.con-left{
+				width: 700px;
+				height: 600px;
+				float: left;
+			}
+		}
+		.con-right{
+			float: right;
+			width: 400px;
+			overflow: hidden;
+			background: #FFF;
+			padding-bottom: 20px;
+			border: 1px solid #f2f2f1;
+			margin-top: 100px;
+			.form-top{
+				height: 56px;
+				background-color: #FAFAFC;
+				font-family: "Microsoft Yahei", "微软雅黑";
+				font-size: 16px;
+				h2{
+					color: #333333;
+					font-size: 16px;
+					line-height: 56px;
+					float: left;
+					font-weight: 100;
+					#login_tab1{
+						width: 90px;
+						height: 100%;
+						float: left;
+						text-align: center;
+						cursor: pointer;
+						border-bottom: 1px solid #eeeeee;
+					}
+					#login_tab2{
+						width: 310px;
+						float: left;
+						text-indent: 20px;
+						border-bottom: 1px solid #eeeeee;
+						cursor: pointer;
+					}
+					.on{
+						background-color: #fff;
+						border: 1px solid #eeeeee;
+						box-sizing: border-box;
+						border-bottom: none !important;
+					}
+				}
+			}
+		}
+	}
+}
