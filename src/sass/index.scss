@@ -701,7 +701,7 @@ aside{
 				}
 				//弹出的列表
 				.list-con{
-					//display:none;
+					display:none;
 					width: 260px;
 					height: 410px;
 					position: absolute;
@@ -762,6 +762,57 @@ aside{
 						}
 					}
 				}
+			}
+		}
+	}
+	#banner{
+		width: 960px;
+		height: 489px;
+		position: relative;
+		overflow: hidden;
+		//banner
+		.banner-list{
+			width: 5060px;
+			height: 489px;
+			position: absolute;
+			li{
+				float: left;
+				width: 960px;
+				height: 489px;
+				overflow: hidden;
+				position: relative;
+			}
+		}
+		#btn{
+			//banner
+			position: absolute;
+			width: 930px;
+			height: 60px;
+			padding: 5px 20px;
+			right: 0;
+			bottom: 0;
+			text-align: right;
+			p{
+				width: 11px;
+				height: 4px;
+				display: none;
+				margin: 0 auto;
+				margin-top: 5px;
+				background-color: #1eaa39;
+			}
+			span{
+				    width: 153px;
+					height: 40px;
+					display: inline-block;
+					margin-left: 1px;
+					cursor: pointer;
+					background: rgba(0, 0, 0, 0.3);
+					opacity: 0.3;
+					color: #FFFFFF;
+					font-size: 12px;
+					font-family: "simsun";
+					text-align: center;
+					line-height: 40px;
 			}
 		}
 	}

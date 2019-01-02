@@ -85,7 +85,7 @@ $(function(){
 	//回到顶部按钮
 	$("#re-top").parent().click(function(){
 		//$("html,body").animate({scrollTop:"0"});
-		 $("html,body").scrollTop();
+		 $("html,body").scrollTop(0);
 	})
 	/*
 		logo*搜索栏
@@ -112,44 +112,102 @@ $(function(){
 		target.css({'background':''});
 	})
 	
-	var $a = $("#a");
-	var $level01 = $("#ul"); //一级菜单
-	var $level02 = $("#div"); //二级菜单
+	var $list = $("#list");
+	var $listShow = $("#list-show"); //一级菜单
+	var $listCon = $("#list-con"); //二级菜单
+	var $listConRt = $("#list-con-right"); //二级菜单
 	
+	$listShow.mouseenter(function(){
+		$listCon.css({display:"block"});
+		$listConRt.css({display:"block"});
+	})
+	$listShow.mouseleave(function(){
+		$listCon.css({display:"none"});
+		$listConRt.css({display:"none"});
+	})
 	//获取json
-	$.getJSON("js/menu.json", function(json) {
-		console.log(json.menu);
-		var myMenu = json.menu;
-		//console.log(myMenu);
-		
-		var myOne = myMenu.one;
-		var myTwo = myMenu.two;
-		//console.log(myOne);
-		$.each(myOne,function(j){
-			$("<li>" + myOne[j] + "</li>").appendTo("#ul");
-		})
-		$.each(myTwo,function(i){
-			$("<div>" + myTwo[i] + "</div>").appendTo("#div");
-		})
-		
-		$level01.mouseover(function() {
-			$(this).css("display", "block");
-		});
-		$a.mouseover(function() {
-			$level01.css("display", "block");
-		});
-		$("ul li").mouseover(function() {
-			$level02.css("display", "block");
-			$("#div div").css("display", "none").eq($(this).index()).css("display", "block");
-		});
-		$("#div div").mouseout(function() {
-			$level01.css("display", "none");
-			$level02.css("display", "none");
-		});
+// 	$.getJSON("menu.json", function(json) {
+// 		console.log(json.menu);
+// 		var myMenu = json.menu;
+// 		
+// 		var myOne = myMenu.one;
+// 		var myTwo = myMenu.two;
+// 	
+// 		$.each(myOne,function(j){
+// 			$("<li>" + myOne[j] + "</li>").appendTo("#ul");
+// 		})
+// 		$.each(myTwo,function(i){
+// 			$("<div>" + myTwo[i] + "</div>").appendTo("#div");
+// 		})
+// 		
+// 		$listCon.mouseover(function() {
+// 			$(this).css("display", "block");
+// 		});
+// 		$a.mouseover(function() {
+// 			$listCon.css("display", "block");
+// 		});
+// 		$("ul li").mouseover(function() {
+// 			$level02.css("display", "block");
+// 			$("#div div").css("display", "none").eq($(this).index()).css("display", "block");
+// 		});
+// 		$("#div div").mouseout(function() {
+// 			$listCon.css("display", "none");
+// 			$level02.css("display", "none");
+// 		});
+// 	});
+	//banner轮播效果
+	var $banner = $("#banner")
+	var $bannerList = $("#banner-list");
+	var $listPic = $("#banner-list li");
+	var $listPicWidth = $listPic.eq(0).width();
+	var $btn = $("#btn span")
+	var timer = null;
+	var size = $btn.size();
+	//console.log($btn.size());
+	var index = -1;
+	//鼠标滑过事件
+	$banner.hover(function(){
+		clearInterval(timer);
+	},function(){
+		timer = setInterval(slider,3000);
 	});
-	
-	
-	
+	function slider(){
+		index ++;
+	//	console.log(index);
+		doSlider();
+	}
+	function doSlider(){
+// 		// 圆点按钮轮播
+// 		//dots.removeClass('dots_active').eq(index % size).addClass('dots_active');
+// 		//console.log(2);
+// 		// 图片轮播
+		$bannerList.stop().animate({
+			left : - (index + 1) * $listPicWidth + "px"
+		},1000,function(){
+			if(index == size){
+				index = -1;
+				$bannerList.css('left', - (index + 1) * $listPicWidth + 'px');
+			}else if(index == -1){				
+				index = size - 1;
+				$bannerList.css('left', - (size) * $listPicWidth + 'px');
+			}
+		});
+		//console.log()
+ 	}
+	timer = setInterval(slider,3000);
+		// 点击圆点切换图片
+	$btn.mouseenter(function(){
+		$(this).css({opacity:1})
+		$(this).children().css({display:"block"})
+		index = $(this).index();
+		doSlider();
+	});
+	$btn.mouseleave(function(){
+		$(this).css({opacity:0.3})
+		$(this).children().css({display:"none"})
+		//index = $(this).index();
+		doSlider();
+	});
 	
 	
 	
