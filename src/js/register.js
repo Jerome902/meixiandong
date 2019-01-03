@@ -1,8 +1,7 @@
 //引入底部
 $(function(){
 	$("footer").load("index.html footer .bottom-nr")
-})
-$(function(){
+	
 	//获取表单元素
 	var $user = $("#name-user");
 	var $pwd = $("#test-password");

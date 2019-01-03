@@ -79,7 +79,7 @@ $(function(){
 			$("#code-show").animate({right:"42px"});
 		},
 		function(){
-			$("#code-show").animate({right:"-187px"});
+			$("#code-show").css({display:"none",right:"-187px"});
 			$(this).css("background","");
 		})
 	//回到顶部按钮

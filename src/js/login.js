@@ -3,13 +3,31 @@ $(function(){
 	var $user = $("#username");
 	var $pwd = $("#password");
 	var $logBtn = $("#loginsubmit");
+	var $loginTab1 = $("#login_tab1");
+	var $loginTab2 = $("#login_tab2");
+	
 
+	//选择登录方式
+	$loginTab1.click(function(){
+		$("#user-message").css({display:"block"});
+		$("#test-login").css({display:"none"});
+		$(this).attr("class","on");
+		$loginTab2.attr("class","");
+	})
+	$loginTab2.click(function(){
+		$("#test-login").css({display:"block"});
+		$("#user-message").css({display:"none"});
+		$(this).attr("class","on");
+		$loginTab1.attr("class","");
+	})
+
+	//判断账号是否正确
 	$logBtn.click(function(){
 		var uname = $user.val();
 		var pwd = $pwd.val();
 		var $cookieStr = $.cookie('registerUser');
 		var obj = strToObj($cookieStr);
-
+		
 		if(obj[uname] == pwd){
 			alert('登录成功！');
 			location.href = 'index.html';
