@@ -1,5 +1,7 @@
 @import "public";
-
+input{
+	outline: none;
+}
 //logo
 .header{
 	width: 1200px;
@@ -36,6 +38,7 @@
 				float: left;
 			}
 		}
+		//右侧表单
 		.con-right{
 			float: right;
 			width: 400px;
@@ -75,6 +78,167 @@
 						border: 1px solid #eeeeee;
 						box-sizing: border-box;
 						border-bottom: none !important;
+					}
+				}
+			}
+			.form-con{
+				width: 312px;
+				margin: 0 auto;
+				margin-top: 23px;
+				.user-message{
+					.user,.pwd{
+						width: 300px;
+						height: 36px;
+						line-height: 36px;
+						border: 1px solid #deded3;
+						border-radius: 4px;
+						padding-left: 10px;
+					}
+					.pwd{
+						margin-top: 10px;
+					}
+					.ver{
+						margin-top: 10px;
+						height: 38px;
+						#code-math{
+							width: 94px;
+							float: left;
+						}
+						#seccode_ttf{
+							float: left;
+							margin-left: 6px;
+							cursor: pointer;
+						}
+						.refresh{
+							padding-left: 5px;
+							line-height: 38px;
+							color: #1EAA39;
+							font-size: 14px;
+							float: left;
+						}
+					}
+					.infor{
+						margin-top: 20px;
+						.rem{
+							color: #666666;
+							font-size: 14px;
+							float: left;
+							vertical-align: middle;
+							line-height: 16px;
+							#remember{
+								margin-top: 2px;
+								float: left;
+								margin-right: 5px;
+							}
+						}
+						.forgot{
+							float: right;
+							a{
+								font-size: 14px;
+								font-family: "Microsoft Yahei", "微软雅黑";
+								color: #1EAA39;
+							}
+						}
+					}
+				}
+				.login-btn{
+					#loginsubmit{
+						margin-top: 20px;
+						width: 300px;
+						height: 50px;
+						line-height: 50px;
+						background: #1EAA39;
+						border-radius: 4px;
+						font-family: "Microsoft Yahei", "微软雅黑";
+						color: #FFF;
+						font-size: 16px;
+						cursor: pointer;
+						border: 0;
+					}
+				}
+				.fix{
+					display: none;
+					position: relative;
+					.user,.pwd{
+						width: 300px;
+						height: 36px;
+						line-height: 36px;
+						border: 1px solid #deded3;
+						border-radius: 4px;
+						box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+						padding-left: 10px;
+					}
+					.ver{
+						margin-top: 10px;
+						#cod-math{
+							width: 112px;
+							float: left;
+						}
+						#seccode-ttf{
+							cursor: pointer;
+							float: left;
+							margin-left: 6px;
+						}
+						.refresh{
+							padding-left: 4px;
+							padding-top: 10px;
+							line-height: 30px;
+							color: #1EAA39;
+							font-size: 14px;
+							float: left;
+						}
+					}
+					#verify{
+						width: 150px !important;
+						float: left;
+						margin-top: 10px;
+					}
+					#get-verify{
+						margin-top: 10px;
+						height: 37px;
+						border-radius: 4px;
+						box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+						cursor: pointer;
+						width: 130px;
+						border: 1px solid #1EAA39;
+						margin-left: 5px;
+						background-color: #fff;
+						color: #1EAA39;
+						float: right;
+					}
+					#icon{
+						position: relative;
+						left: -24px;
+						bottom: 35px;
+						width: 16px;
+						height: 16px;
+						display: none;
+						background: url("../img/login/re_05.jpg") no-repeat;
+					}
+					span{
+						width: 258px;
+						height: 21px;
+						display: block;
+						float: left;
+						margin: 0 auto;
+						font-family: "Microsoft Yahei", "微软雅黑";
+						font-size: 14px;
+						color: #666666;
+						margin-top: 20px;
+					}
+				}
+				h3{
+					width: 130px;
+					height: 21px;
+					float: left;
+					margin-top: 10px;
+					font-weight: 100;
+					font-family: "Microsoft Yahei", "微软雅黑";
+					font-size: 14px;
+					color: #333333;
+					line-height: 21px;
+					a{
+						color: #1eaa39;
 					}
 				}
 			}

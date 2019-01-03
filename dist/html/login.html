@@ -4,6 +4,9 @@
 		<meta charset="utf-8">
 		<title></title>
 		<link rel="stylesheet" href="../css/login.min.css">
+		<script src="../js/jquery-1.11.3.min.js"></script>
+		<script src="../js/jquery.cookie.min.js"></script>
+		<script src="../js/login.min.js"></script>
 	</head>
 	<body>
 		<header class="header">
@@ -29,16 +32,34 @@
 						<div class="user-message">
 							<input type="text" id="username" class="user" placeholder="请输入用户名/邮箱/手机号码">
 							<input id="password" class="pwd" type="password" placeholder="请输入密码">
-							<div class="ver">
-								<input type="text" name="code_math" class="user" id="code_math" placeholder="请输入验证码"><img src="" alt=""><a href=""></a>
-							</div>
+							<!-- <div class="ver">
+								<input type="text" name="code_math" class="user" id="code-math" placeholder="请输入验证码">
+								<img src="../img/login/code_num.php.png" alt="" id="seccode_ttf">
+								<a href="javascript:;" class="refresh">刷新一下？</a>
+							</div> -->
 							<div class="infor">
-								<div class="rem"></div>
-								<p><a href="javescript:;">忘记密码</a></p>
+								<div class="rem">
+									<input id="remember" name="remember" type="checkbox" value="1">记住我
+								</div>
+								<p class="forgot"><a href="javescript:;">忘记密码</a></p>
 							</div>
 						</div>
-						<div class="login-btn"></div>
-						<h3><a href="register.html"></a></h3>
+						<div id="test-login" class="fix">
+							<input id="user-phone" class="user" name="user-phone" type="text" placeholder="请输入手机号码">
+							<div class="ver">
+								<input type="text" class="user" id="cod-math" placeholder="请输入右侧验证码">
+								<img src="../img/login/code_num.php.png" id="seccode-ttf" title="看不清，点击换一张">
+								<a href="javascript:;" class="refresh">刷新一下?</a>
+							</div>
+							<input id="verify" class="pwd" name="mobile_verify" type="text" placeholder="请输入短信验证码">
+							<input type="button" id="get-verify" value="获取短信验证码">
+							<i id="icon"></i>
+							<span>注：验证码60秒内有效，过期请重新获取</span>
+						</div>
+						<div class="login-btn">
+							<input id="loginsubmit" name="loginsubmit" type="submit" value="登 录">
+						</div>
+						<h3>没有账号 , <a href="register.html">去注册 > </a></h3>
 					</div>
 				</div>
 			</div>
