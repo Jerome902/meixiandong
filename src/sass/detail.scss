@@ -1,46 +1,55 @@
 @import "public";
 
 //商品详情顶部
-.left-pro{
-	width: 370px;
-	#showbox{
-		width: 350px;
-		height: 350px;
-		position: relative;
-		background: #fff;
-		z-index: 10;
-		div{
-			position: relative;
+.detail-main-l{
+	float: left;
+	.left-pro{
+		width: 370px;
+		#showbox{
 			width: 350px;
 			height: 350px;
-			top: 0px;
-			left: 0px;
-			b{
-				display: block;
-				img{
-					width: 350px;
-					height: 350px;
+			position: relative;
+			background: #fff;
+			z-index: 10;
+			div{
+				position: relative;
+				width: 350px;
+				height: 350px;
+				top: 0px;
+				left: 0px;
+				b{
+					display: block;
+					img{
+						width: 350px;
+						height: 350px;
+					}
+				}
+				span{
+					position: absolute;
+					left: 175px;
+					top: 85.5px;
+					display: none;
+					z-index: 5;
+					width: 175px;
+					height: 175px;
+					background: url("../img/detail/whitebg.png") repeat;
 				}
 			}
-			span{
+			p{
 				position: absolute;
-				left: 175px;
-				top: 85.5px;
+				overflow: hidden;
+				top: 0px;
 				display: none;
-				z-index: 5;
-				width: 175px;
-				height: 175px;
-				background: url("../img/detail/whitebg.png") repeat;
+				width: 350px;
+				height: 350px;
+				left: 360px;
+				img{
+					position: absolute;
+				}
 			}
 		}
-		p{
-			position: absolute;
-			overflow: hidden;
-			top: 0px;
-			display: none;
-			width: 350px;
-			height: 350px;
-			left: 360px;
-		}
 	}
+}
+.detail-main-r{
+	float: left;
 }

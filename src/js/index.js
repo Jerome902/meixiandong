@@ -134,7 +134,6 @@ $(function(){
 
 	//获取json
 	$.getJSON("../menu.json", function(json) {
-		console.log(json.menu);
 		var myMenu = json.menu;
 		var myOne = myMenu.one;
 		var myTwo = myMenu.two;
