@@ -1,5 +1,5 @@
-//引入顶部与底部
 $(function(){
+	//引入顶部与底部
 	$("header").load("index.html header");
  	$("aside").load("index.html aside");
 	$(".logo-search").load("index.html .logo-search");
