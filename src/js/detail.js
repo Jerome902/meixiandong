@@ -6,7 +6,6 @@ $(function(){
 	$(".listTop").load("index.html .listTop");
 	$("footer").load("index.html footer");
 	
-	
 	//放大镜
 	//获取元素
 	var $bigBox = $("#left-pro");

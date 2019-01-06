@@ -22,9 +22,9 @@ gulp.task('sass',function(){
 	.pipe(gulp.dest('./dist/css'));
 })
 gulp.task('img', function(){
-    gulp.src('src/img/detail/*')
+    gulp.src('src/img/cart/*')
         .pipe(imagemin())
-        .pipe(gulp.dest('dist/img/detail'))
+        .pipe(gulp.dest('dist/img/cart'))
 })
 //自动监听
 gulp.task('default',()=>{

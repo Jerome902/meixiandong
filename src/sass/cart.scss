@@ -1,0 +1,30 @@
+@import "public";
+
+//顶部
+.w1200{
+	margin: 0 auto;
+	overflow: hidden;
+	width: 1200px;
+	height: 92px;
+	background-color: #FAFAFC;
+	.header{
+		background-color: #fff;
+		bottom: 0px;
+		top: 10px;
+		color: #1a9733;
+		position: relative;
+		height: 92px;
+		.logo{
+			width: 500px;
+			float: left;
+		}
+		h2{
+			margin-left: 20px;
+			font-size: 23px;
+			font-weight: 500;
+			float: left;
+			position: relative;
+			top: 50px;
+		}
+	}
+}
